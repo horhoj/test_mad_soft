@@ -1,6 +1,20 @@
 .Button {
-  padding: 3px;
+  padding: 10px;
   cursor: pointer;
   min-width: 30px;
   min-height: 30px;
+  border-radius: 8px;
+  border: none;
+  background-color: #b02835;
+  color: #fff;
+
+  &:hover {
+    background-color: #cb4349;
+  }
+
+  &:disabled {
+    background-color: #999;
+  }
+
+  transition: background-color 200ms;
 }

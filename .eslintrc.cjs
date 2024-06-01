@@ -45,7 +45,7 @@ module.exports = {
     'dot-location': [types.OFF, 'object'],
     'dot-notation': types.WARN,
     'grouped-accessor-pairs': [types.WARN, 'setBeforeGet'],
-    'max-classes-per-file': [types.ERROR, 1],
+    'max-classes-per-file': [types.WARN, 1],
     'no-constructor-return': types.WARN,
     'no-div-regex': types.WARN,
     'no-else-return': types.WARN,
@@ -122,6 +122,7 @@ module.exports = {
     '@typescript-eslint/no-extraneous-class': types.OFF,
     '@typescript-eslint/explicit-function-return-type': types.OFF,
     '@typescript-eslint/no-empty-function': types.OFF,
+    'max-classes-per-file': types.OFF,
     // 'react/button-has-type': [
     //   types.ERROR,
     //   {

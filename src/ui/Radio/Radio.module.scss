@@ -1,0 +1,27 @@
+.Radio {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.input {
+  display: none;
+}
+
+.indicator {
+  width: 15px; 
+  height: 15px;
+  
+  border-radius: 50%;
+}
+
+.indicatorChecked {
+  background-color: #b02835;
+}
+
+.indicatorUnchecked {
+  border: 1px solid #333;
+}

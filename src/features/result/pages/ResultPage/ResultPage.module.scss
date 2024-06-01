@@ -1,0 +1,28 @@
+.ResultPage {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.questionCard {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.questionList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.answerList {
+  padding-left: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+}

@@ -1,0 +1,21 @@
+.ProgressBar {
+  display: flex;
+  gap: 10px;
+}
+
+.element {
+  width: 100%;
+  height: 10px;
+}
+
+.current {
+   background-color: #af2633;
+}
+
+.prev {
+  background-color: #333;
+}
+
+.next {
+  background-color: #d6d6d6;
+}

@@ -1,3 +1,5 @@
+import styles from './DevView.module.scss';
+
 interface DevViewProps {
   data: unknown;
   title: string;
@@ -5,7 +7,7 @@ interface DevViewProps {
 export function DevView({ data, title }: DevViewProps) {
   if (data) {
     return (
-      <div>
+      <div className={styles.DevView}>
         <div>
           <strong>{title}</strong>
         </div>
