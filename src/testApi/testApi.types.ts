@@ -34,4 +34,5 @@ export interface PersonTestStoreType {
   updatePersonTest(personTestId: string, personTestData: PersonTest): void;
   addPersonTest(personTestData: PersonTest): void;
   getPersonTestList(): PersonTest[];
+  deletePersonTest(personTestId: string): void;
 }

@@ -9,14 +9,16 @@ import { Li } from '~/ui/Li';
 import { HelperText } from '~/ui/HelperText';
 import { NavigateWidget } from '~/widgets/NavigateWidget';
 import { routes } from '~/router/routes';
+import { Button } from '~/ui/Button';
 
 export type PersonTestListGoTo = (personTestId: PersonTestIdContract, to: 'result' | 'return') => void;
 
 interface PersonTestListProps {
   personTestList: PersonTestListItemContract[];
   isLoading: boolean;
+  onDelete: (personTestId: PersonTestIdContract) => void;
 }
-export function PersonTestList({ personTestList, isLoading }: PersonTestListProps) {
+export function PersonTestList({ personTestList, isLoading, onDelete }: PersonTestListProps) {
   return (
     <Column>
       <Row>
@@ -62,6 +64,9 @@ export function PersonTestList({ personTestList, isLoading }: PersonTestListProp
                   </HelperText>
                 </Row>
                 <Row>
+                  <Button onClick={() => onDelete(personTest.id)} disabled={isLoading}>
+                    Удалить тест
+                  </Button>
                   <NavigateWidget
                     title={'Результат'}
                     path={generatePath(routes.RESULT, { id: personTest.id })}

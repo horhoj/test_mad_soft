@@ -8,6 +8,9 @@ export class PersonTestStore implements PersonTestStoreType {
   public constructor() {
     this.loadFromLS();
   }
+  public deletePersonTest(personTestId: string): void {
+    this.personTestList = this.personTestList.filter((el) => el.id !== personTestId);
+  }
 
   private saveToLS() {
     localStorage.setItem(PERSON_TEST_STORAGE_LS_KEY, JSON.stringify(this.personTestList));

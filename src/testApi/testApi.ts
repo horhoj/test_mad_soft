@@ -194,4 +194,10 @@ export class TestApi implements TestApiContract {
 
     return personTest.status;
   }
+
+  public async deletePersonTest(personTestId: string): Promise<void> {
+    await this.system('deletePersonTest', { personTestId });
+    const personTest = this.getPersonTest(personTestId);
+    this.personTestStore.deletePersonTest(personTest.id);
+  }
 }

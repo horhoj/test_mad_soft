@@ -62,6 +62,7 @@ export interface TestApiContract {
   getPersonTestResult(personTestId: PersonTestIdContract): Promise<PersonTestResult>;
   getTestList(): Promise<TestListItemContract[]>;
   getPersonTestStatus(personTestId: PersonTestIdContract): Promise<PersonTestStatusContract>;
+  deletePersonTest(personTestId: PersonTestIdContract): Promise<void>;
 }
 
 export enum messageContract {
