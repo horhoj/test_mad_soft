@@ -10,6 +10,7 @@ export class PersonTestStore implements PersonTestStoreType {
   }
   public deletePersonTest(personTestId: string): void {
     this.personTestList = this.personTestList.filter((el) => el.id !== personTestId);
+    this.saveToLS();
   }
 
   private saveToLS() {
